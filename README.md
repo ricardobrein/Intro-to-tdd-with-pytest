@@ -47,7 +47,8 @@ Uno de los puntos fuertes de  Pytest es que permite escribir `funciones de prueb
 
 A continuación una función de prueba sencilla:
 
-```def test_main():
+```
+def test_main():
     assert "a string value" == "a string value"
     
 ```
@@ -55,7 +56,8 @@ A continuación una función de prueba sencilla:
 
 Similar a las otras convenciones mencionadas, las clases de prueba y los métodos deben tener el prefijo `test`.
 
-```class TestUser:
+```
+class TestUser:
 
     def test_username(self):
         assert default() == "default username"
@@ -81,15 +83,16 @@ Pytest no es solo un marco para crear las pruebas sino que por supuesto, las eje
 pytest requiere: Python 3.7+ or PyPy3.
 
 ```
-    pip install -U pytest
-   pytest --version
-    pytest 7.4.2
+pip install -U pytest
+pytest --version
+pytest 7.4.2
 
 ```
 ---
 Vamos a escribir la siguiente funcion en el archivo *test_main.py* para ver como se comporta pytest
 
-```# funcion de test_main
+```
+# funcion de test_main
 
 def test_main():
     assert True
@@ -107,10 +110,11 @@ En Pytest, la instrucción "assert" puede realizar comparaciones enriquecidas en
 
 Ahora, veamos esta ventaja cuando trabajamos con comparaciones comunes, utilizando objetos de Python. Por ejemplo, Pytest genera los informes de errores al comparar cadenas muy largas
 
-```def test_long_strings():
-    izquierda = "Esta es una cadena muy larga que se va a comparar con otra cadena larga"
-    derecha = "Esta es una cadena muy larga que se va a comparar con otra cadena larga"
-    assert izquierda == derecha
+```
+def test_long_strings():
+izquierda = "Esta es una cadena muy larga que se va a comparar con otra cadena larga"
+derecha = "Esta es una cadena muy larga que se va a comparar con otra cadena larga"
+assert izquierda == derecha
 ```
 
 ![Pytest2](media/pytest2.png)
@@ -121,11 +125,11 @@ Pytest tambien puede ayudar con otros objetos y estructuras de datos. Así se co
 
 **Veamos ahora con comparando diccionarios**
 
-```def test_diccionarios():
+```
+def test_diccionarios():
     izquierda = {"calle": "Ferry Ln.", "número": 39, "estado": "Nevada", "código postal": 30877, "condado": "Frett"}
     derecha = {"calle": "Ferry Lane", "número": 38, "estado": "Nevada", "código postal": 30877, "condado": "Frett"}
     assert izquierda == derecha
-
 ```
 Como vemos ver nos da una vision clara de que es lo que está ocurriendo, comparar dos diccionarios grandes, si hay errores, puede ser abrumador, pero Pytest realiza un trabajo sobresaliente al **proporcionar contexto e identificar el error:**
 
@@ -133,9 +137,10 @@ Como vemos ver nos da una vision clara de que es lo que está ocurriendo, compar
 
 Además nos dice que si queremos un informe mucho más extenso podemos usar el comando `-vv` para mostrarlo:
 
-```pytest -vv`
 ```
-> ⚠️En esta prueba, en el diccionario hay dos errores. Uno es que el valor "calle" es diferente y el otro es que "número" no coincide.
+pytest -vv
+```
+⚠️En esta prueba, en el diccionario hay dos errores. Uno es que el valor "calle" es diferente y el otro es que "número" no coincide.
 
 ![pytest5](media/pytest5.png)
 
