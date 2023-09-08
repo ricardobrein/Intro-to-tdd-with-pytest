@@ -2,7 +2,7 @@
 
 Pytest es altamente configurable y puede controlar conjuntos de pruebas complejos. Pero no requiere muchos conocimientos para empezar a escribir pruebas. De hecho, cuanto más sencillo sea escribir pruebas en un marco, mejor.
 
-**Comencemos a relaizar pruebas con pytest
+**Comencemos a relaizar pruebas con pytest.**
 
 Al final de este mini-tutorial, tendrás todo lo que necesitas para empezar a escribir las primeras pruebas y ejecutarlas con Pytest.
 
@@ -39,8 +39,7 @@ El directorio `tests` se encuentra en la raíz del proyecto con un único archiv
 
 ### ⚠️ Precaución
 
-    Evite usar `test` (en singular) como nombre de directorio. El nombre test es un módulo de Python, la creación de un directorio con el mismo nombre lo invalidaría. Use siempre el plural tests en su lugar.
-
+*Evite usar `test` (en singular) como nombre de directorio. El nombre test es un módulo de Python, la creación de un directorio con el mismo nombre lo invalidaría. Use siempre el plural tests en su lugar.*
 
 ### Funciones de prueba
 
@@ -87,9 +86,8 @@ pytest requiere: Python 3.7+ or PyPy3.
     pytest 7.4.2
 
 ```
-
 ---
-Vamos a escribir lo siguiente en el archivo *test_main.py* para ver como se comporta pytest
+Vamos a escribir la siguiente funcion en el archivo *test_main.py* para ver como se comporta pytest
 
 ```# funcion de test_main
 
@@ -97,7 +95,7 @@ def test_main():
     assert True
 ```
 
-En una terminal de comandos, en la ruta de acceso donde existe el archivo test_main.py, podemos escribir simplemente el ejecutable `pytest`:
+En una terminal, en la ruta de acceso donde existe el archivo test_main.py, podemos escribir simplemente el ejecutable `pytest`:
 
 ![pytest1](media/pytest1.png)
 
@@ -135,11 +133,8 @@ Como vemos ver nos da una vision clara de que es lo que está ocurriendo, compar
 
 Además nos dice que si queremos un informe mucho más extenso podemos usar el comando `-vv` para mostrarlo:
 
-`pytest -vv`
-
-
+```pytest -vv`
 ```
-
 > ⚠️En esta prueba, en el diccionario hay dos errores. Uno es que el valor "calle" es diferente y el otro es que "número" no coincide.
 
 ![pytest5](media/pytest5.png)
