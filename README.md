@@ -144,7 +144,7 @@ pytest -vv
 
 ![pytest5](media/pytest5.png)
 
-Al ejecutar pytest -vv, el informe aumenta la cantidad de detalles y proporciona una comparación muy precisa. No solo este informe detecta y muestra el error, también permite realizar cambios para corregir el problema rápidamente.
+✍️Resumen: Al ejecutar pytest -vv, el informe aumenta la cantidad de detalles y proporciona una comparación muy precisa. No solo este informe detecta y muestra el error, también te permite realizar cambios para corregir el problema rápidamente.
 
 
 ## Parte 2: Clases y metodos de prueba en pytest
