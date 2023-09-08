@@ -1,41 +1,46 @@
-Conceptos básicos de Pytest
+## Introducción al Test Driven Development y Conceptos básicos de Pytest
 
-Comencemos a realizar pruebas con Pytest. Como hemos mencionado antes, Pytest es altamente configurable y puede controlar conjuntos de pruebas complejos. Pero no requiere muchos conocimientos para empezar a escribir pruebas. De hecho, cuanto más sencillo sea escribir pruebas en un marco, mejor.
+Pytest es altamente configurable y puede controlar conjuntos de pruebas complejos. Pero no requiere muchos conocimientos para empezar a escribir pruebas. De hecho, cuanto más sencillo sea escribir pruebas en un marco, mejor.
 
-Al final de esta sección, tendrá todo lo que necesita para empezar a escribir las primeras pruebas y ejecutarlas con Pytest.
+**Comencemos a relaizar pruebas con pytest
 
-Convenciones
-Antes de profundizar en la escritura de pruebas, debemos cubrir algunas de las convenciones de prueba en las que se basa Pytest.
+Al final de este mini-tutorial, tendrás todo lo que necesitas para empezar a escribir las primeras pruebas y ejecutarlas con Pytest.
 
-No hay reglas difíciles sobre archivos de prueba, directorios de prueba o diseños de pruebas generales en Python. Al conocer estas reglas, puede aprovechar la detección y ejecución automáticas de pruebas sin necesidad de ninguna configuración adicional.
+### Convenciones
 
-Archivos de prueba y directorio de pruebas
-El directorio principal de las pruebas es el directorio tests. Puede colocar este directorio en el nivel raíz del proyecto, pero tampoco es inusual verlo junto con los módulos de código.
+Antes de profundizar con las pruebas, debemos cubrir algunas de las convenciones de prueba en las que se basa Pytest.
 
-> Nota
+No hay reglas difíciles, pero al conocer estas reglas, puedes aprovechar la detección y ejecución automáticas de pruebas sin necesidad de ninguna configuración adicional.
 
-En este módulo, usaremos de forma predeterminada tests en la raíz de un proyecto.
+### Archivos de prueba y directorio de pruebas
 
-Veamos cómo se ve la raíz de un pequeño proyecto de Python denominado jformat:
+El directorio principal de las pruebas es el directorio `tests`. Puede colocar este directorio en la raíz del proyecto, pero también es común verlo junto a los scripts de código.
 
-.
-├── README.md
+> Nota⚠️
+
+Usaremos de forma predeterminada tests en la raíz de un proyecto.
+
+**Supongamos que asi es cómo se ve la raíz de un pequeño proyecto de Python denominado jformat:**
+
+```├── README.md
 ├── jformat
 │   ├── __init__.py
 │   └── main.py
 ├── setup.py
 └── tests
     └── test_main.py
+    
+```
 
+El directorio `tests` se encuentra en la raíz del proyecto con un único archivo de prueba. En este caso, el archivo de prueba se denomina test_main.py. **Estas son dos convenciones críticas:**
 
-El directorio tests se encuentra en la raíz del proyecto con un único archivo de prueba. En este caso, el archivo de prueba se denomina test_main.py. Estas son dos convenciones críticas:
+1. Uso del nombre `tests` en la carpeta para colocar archivos de prueba y directorios de pruebas anidados
+2. Prefijo de archivos de prueba con `test_`. El prefijo indica que el archivo contiene código de prueba.
 
-Uso de un directorio tests para colocar archivos de prueba y directorios de pruebas anidados
-Prefijo de archivos de prueba con test. El prefijo indica que el archivo contiene código de prueba.
+### ⚠️ Precaución
 
-⚠️ Precaución
+    Evite usar `test` (en singular) como nombre de directorio. El nombre test es un módulo de Python, la creación de un directorio con el mismo nombre lo invalidaría. Use siempre el plural tests en su lugar.
 
-```Evite usar test (forma singular) como nombre de directorio. El nombre test es un módulo de Python, por lo que la creación de un directorio con el mismo nombre lo invalidaría. Use siempre el plural tests en su lugar.```
 
 ### Funciones de prueba
 
@@ -47,7 +52,6 @@ A continuación una función de prueba sencilla:
     assert "a string value" == "a string value"
     
 ```
-
 ### Clases de prueba y métodos de prueba
 
 Similar a las otras convenciones mencionadas, las clases de prueba y los métodos deben tener el prefijo `test`.
