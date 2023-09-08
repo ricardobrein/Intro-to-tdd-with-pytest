@@ -104,7 +104,7 @@ En una terminal, en la ruta de acceso donde existe el archivo test_main.py, pode
 
 ## Como hacer asserts de manera fácil
 
-Como habrás notado, todos los ejemplos de prueba utilizan la instrucción "assert". En Python, normalmente evitamos el uso de "assert" para las pruebas debido a que no proporciona informes detallados en caso de error en la aserción. Sin embargo, Pytest cambia esta esta dinámica.
+**Como habrás notado**, todos los ejemplos de prueba utilizan la instrucción "assert". En Python, normalmente evitamos el uso de "assert" para las pruebas debido a que no proporciona informes detallados en caso de error en la aserción. Sin embargo, Pytest cambia esta esta dinámica.
 
 En Pytest, la instrucción "assert" puede realizar comparaciones enriquecidas en segundo plano sin requerir código adicional o realizar configuraciones extrañas. Esto significa que puedes utilizar los operadores estándar de Python, como >, <, !=, >= o <=, al crear tus aserciones. **Esta característica es una de las ventajas clave de Pytest**, no necesitas aprender una nueva sintaxis para escribir aserciones.
 
@@ -112,9 +112,9 @@ Ahora, veamos esta ventaja cuando trabajamos con comparaciones comunes, utilizan
 
 ```
 def test_long_strings():
-izquierda = "Esta es una cadena muy larga que se va a comparar con otra cadena larga"
-derecha = "Esta es una cadena muy larga que se va a comparar con otra cadena larga"
-assert izquierda == derecha
+    izquierda = "Esta es una cadena muy larga que se va a comparar con otra cadena larga"
+    derecha = "Esta es una cadena muy larga que se va a comparar con otra cadena larga"
+    assert izquierda == derecha
 ```
 
 ![Pytest2](media/pytest2.png)
